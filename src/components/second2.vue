@@ -7,8 +7,15 @@
         <el-form-item label="姓名" :label-width="formLabelWidth">
             <el-input v-model="form.name" auto-complete="off"></el-input>
         </el-form-item>
-        <el-form-item label="审核状态" :label-width="formLabelWidth">
+        <!-- <el-form-item label="审核状态" :label-width="formLabelWidth">
             <el-input v-model="form.status" auto-complete="off"></el-input>
+        </el-form-item> -->
+        <el-form-item label="审核状态" :label-width="formLabelWidth">
+            <el-select v-model="form.status" placeholder="请选择审核状态">
+                <el-option label="待审核" value="0"></el-option>
+                <el-option label="合格" value="1"></el-option>
+                <el-option label="不合格" value="2"></el-option>
+            </el-select>
         </el-form-item>
     </el-form>
     <div slot="footer" class="dialog-footer">
@@ -25,8 +32,10 @@
         </tr>
         <tr :key="item.id" v-for='item in list'>
             <td>{{ item.name }}</td>
-            <td>{{ item.status }}</td>
-            <td v-if="item.status === '审核状态'">
+            <td v-if="item.status === '0'">待审核</td>
+            <td v-else-if="item.status === '1'">合格</td>
+            <td v-else-if="item.status === '2'">不合格</td>
+            <td v-if="item.status === '0'">
                 <button>删除</button>
             </td>
             <td v-else>
@@ -45,7 +54,7 @@ export default{
       list: [{
         id: 0,
         name: '张三',
-        status: '审核状态'
+        status: '0'
       }],
       dialogFormVisible: false,
       formLabelWidth: '120px',
