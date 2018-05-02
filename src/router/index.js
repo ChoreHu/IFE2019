@@ -8,6 +8,7 @@ import test2 from '@/components/test2'
 import test3 from '@/components/test3'
 import second2 from '@/components/second2'
 import second3 from '@/components/second3'
+import second4 from '@/components/second4'
 
 Vue.use(Router)
 Vue.use(ElementUI)
@@ -43,6 +44,11 @@ export default new Router({
       path: '/second3',
       name: 'second3',
       component: second3
+    },
+    {
+      path: '/second4',
+      name: 'second4',
+      component: second4
     }
   ]
 })
