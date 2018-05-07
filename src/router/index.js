@@ -16,6 +16,7 @@ import second0711 from '@/components/second0711'
 import second0712 from '@/components/second0712'
 import second0713 from '@/components/second0713'
 import second0714 from '@/components/second0714'
+import second08 from '@/components/second08'
 import VeeValidate, { Validator } from 'vee-validate'
 import zh from 'vee-validate/dist/locale/zh_CN'// 引入中文文件
 
@@ -102,6 +103,11 @@ export default new Router({
       path: '/second0714',
       name: 'second0714',
       component: second0714
+    },
+    {
+      path: '/second08',
+      name: 'second08',
+      component: second08
     }
   ]
 })
