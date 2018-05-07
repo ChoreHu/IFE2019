@@ -12,6 +12,10 @@ import second4 from '@/components/second4'
 import second5 from '@/components/second5'
 import second6 from '@/components/second6'
 import second62 from '@/components/second62'
+import second0711 from '@/components/second0711'
+import second0712 from '@/components/second0712'
+import second0713 from '@/components/second0713'
+import second0714 from '@/components/second0714'
 import VeeValidate, { Validator } from 'vee-validate'
 import zh from 'vee-validate/dist/locale/zh_CN'// 引入中文文件
 
@@ -78,6 +82,26 @@ export default new Router({
       path: '/second62',
       name: 'second62',
       component: second62
+    },
+    {
+      path: '/second0711',
+      name: 'second0711',
+      component: second0711
+    },
+    {
+      path: '/second0712',
+      name: 'second0712',
+      component: second0712
+    },
+    {
+      path: '/second0713',
+      name: 'second0713',
+      component: second0713
+    },
+    {
+      path: '/second0714',
+      name: 'second0714',
+      component: second0714
     }
   ]
 })
